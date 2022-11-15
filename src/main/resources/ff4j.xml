@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ff4j xmlns="http://www.ff4j.org/schema/ff4j"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.ff4j.org/schema/ff4j http://ff4j.org/schema/ff4j-1.4.0.xsd">
+  >
+  <features>
+
+    <feature uid="AwesomeFeature" description="some desc" enable="true">
+      <!-- <flipstrategy class="org.ff4j.strategy.time.ReleaseDateFlipStrategy" >
+        <param name="releaseDate">2022-11-14-19:29</param>
+      </flipstrategy> -->
+      <security>
+        <role name="admin" />
+      </security>
+    </feature>
+
+    <feature uid="oldService" description="some desc" enable="true"></feature>
+
+    <!-- <feature uid="newService" description="null" enable="false">
+      <flipstrategy class="org.ff4j.strategy.time.ReleaseDateFlipStrategy" >
+        <param name="releaseDate">2022-11-14-19:12</param>
+      </flipstrategy>
+    </feature> -->
+    <feature-group name="premimum">
+      <feature uid="Test1" description="null" enable="false"></feature>
+
+      <feature uid="Test 2" description="null" enable="false">
+        <custom-properties>
+          <property name="TestProperty" value="200" type="org.ff4j.property.PropertyInt" />
+        </custom-properties>
+      </feature>
+    </feature-group>
+
+  </features>
+
+  <properties>
+
+    <property name="maxLoginAttempts" value="12" type="org.ff4j.property.PropertyInt" />
+  </properties>
+
+</ff4j>

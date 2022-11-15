@@ -1,0 +1,36 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Johny@123
+      POSTGRES_DB: ff4j_poc
+    networks:
+      - ff4jpostgresdemo 
+  redis:
+    image: redis:6.2.6   
+    hostname: redis
+    restart: always
+    networks:
+      - redisnetwork
+    ports:
+      - 6379:6379
+    command: redis-server --save 20 1 --loglevel warning
+    volumes:
+      - redis_data_container:/data
+
+ 
+# I want to access ny cluster from host      
+networks:
+  ff4jpostgresdemo:
+    driver: bridge
+  redisnetwork:
+    driver: bridge
