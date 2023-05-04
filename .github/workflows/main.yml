@@ -1,0 +1,16 @@
+name: Build on creating tag
+
+on:
+  push:
+    tags:
+      - z-4**
+      
+      
+jobs:
+  do-something:
+    runs-on: ubuntu-latest
+    steps:
+ 
+      - name: Show tag
+        run: echo "The tag is ${{ github.ref }} --${{ github.ref_name }}"
+        
