@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-
+print("Hello World")
 spark = SparkSession.builder \
     .appName("PostgreSQLConnection") \
     .getOrCreate()
