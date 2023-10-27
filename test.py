@@ -6,7 +6,7 @@ spark = SparkSession.builder \
 jdbc_url = "jdbc:postgresql://mesh-postgres-demo.ce50yhobtvnj.ap-south-1.rds.amazonaws.com:5432/postgres"
 connection_properties = {
     "user": "postgres",
-    "password": "AjJVTp&wF6a0^3",
+    "password": "AjJVTp&sadadads^3",
     "driver": "org.postgresql.Driver"  # Path to the PostgreSQL JDBC driver JAR
 }
 
